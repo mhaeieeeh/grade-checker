@@ -27,3 +27,32 @@ function check() {
     }
 
 }
+
+function university() {
+    let input = document.getElementById('input2').value
+    let output= document.getElementById('output2')
+    let score=Number(input)
+    if(input.trim() ==='') {
+       alert('enter your score')
+    }
+    else if(score >= 4.5 && score<= 5) {
+        output.innerHTML=`<p>First Class honour </p>`
+    }
+     else if(score >= 3.5 && score<= 4.49) {
+        output.innerHTML=`<p>Second Class honour (upper division) 2:1 </p>`
+    } else if(score >= 2.4 && score<= 3.49) {
+        output.innerHTML=`<p>Second Class honour (lower division) 2:2</p>`
+    } else if(score >= 1.5 && score<= 2.39) {
+        output.innerHTML=`<p>Third Class honour </p>`
+    }
+     else if(score >= 1 && score<= 1.49) {
+        output.innerHTML=`<p>Pass </p>`
+    } else if(score >= 0.00 && score<= 0.99) {
+        output.innerHTML=`<p>Fail </p>`
+    }
+    if(score<0 || score  >5) {
+        output.innerHTML=`<p>Invalid result</p>`
+
+    }
+
+}
